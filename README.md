@@ -127,3 +127,85 @@ This dataset powers Tableau Public and Power BI dashboards visualizing:
 * Peak-period vs weekend comparison
 
 * Dynamic slicers for Year, Route/Line, and Mode
+
+---
+
+## 💡 Key Takeaways
+
+* Unified 12 Excel files → one 600K+ record dataset
+
+* Automated ETL pipeline ensures future scalability
+
+* Feature-rich time variables enable peak/off-peak performance analytics
+
+* Incident normalization supports actionable categorization
+
+* Ready for Tableau / Power BI integration for BI dashboards
+
+---
+
+## 🚀 Tools & Technologies
+
+| Category | Tools Used |
+|----------|------------|
+| Data Processing | Python, pandas, numpy |
+| Notebook Environment | Jupyter |
+| Visualization | Tableau Public, Power BI |
+| Data Storage | CSV (cleaned outputs) |
+| Version Control | Git, GitHub |
+
+---
+
+### 🧠 Skills Demonstrated
+
+* Data Engineering and ETL
+
+* Business Intelligence & Dashboarding
+
+* Feature Engineering and Time-Series Analysis
+
+* Text Normalization and Categorization
+
+* Automation of Multi-File Schema Handling
+
+* Visualization Storytelling (Power BI / Tableau)
+
+---
+
+## 🏁 Conclusion
+
+This project demonstrates a full end-to-end **Business Intelligence workflow**, transforming fragmented municipal datasets into a structured analytics pipeline that generates operational insights.
+
+It highlights my ability to:
+
+* Engineer scalable data pipelines
+
+* Extract actionable insights for performance optimization
+
+* Communicate findings effectively through BI tools
+
+---
+
+### 🧩 Future Work
+
+* Incorporate real-time delay APIs for live dashboards.
+
+* Add geospatial mapping with folium for stop-level visualization.
+
+* Explore predictive modeling for delay forecasting by route.
+
+* Publish interactive Tableau Story summarizing yearly transit reliability.
+
+---
+
+## 👨‍💻 Author
+
+**Khushnud Ahmed**
+*MSc Data Science & Analytics, Toronto Metropolitan University*
+💼 Business Intelligence | Data Analytics | Data Science
+
+---
+
+### 🏷️ Tags
+
+#Python #DataCleaning #Tableau #PowerBI #BusinessIntelligence #ETL #DataAnalytics #TorontoTransit #UrbanMobility
