@@ -39,4 +39,42 @@ The project implements a robust **ETL (Extract–Transform–Load)** pipeline de
 
 ### 2️⃣ Schema Standardization
 Creates a consistent column structure across all datasets:
+["mode","source_file","source_sheet",
+"date","time","reported_at","year","month","month_name","day","dow_name","hour",
+"route_or_line","dir_or_bound","loc_or_station",
+"incident_text","incident_code","minutes_delay","minutes_gap","vehicle"]
 
+### 3️⃣ Data Cleaning
+- Converts `minutes_delay` and `minutes_gap` to numeric (`Int64`).  
+- Replaces invalid/negative values with `NaN`.  
+- Strips extra whitespace and harmonizes missing strings.  
+- Merges and exports clean CSVs for both modes.
+
+### 4️⃣ Text Normalization
+Cleans incident descriptions into categorical groups:  
+`Mechanical`, `Collision`, `Medical`, `Security/Police`, `Infrastructure/Signal`, `Weather`, `Operations/Staffing`, `Schedule/Headway`, `Diversion/Detour`.
+
+### 5️⃣ Feature Engineering
+Adds derived temporal features:
+- `year`, `month_name`, `day`, `dow_name`, `hour`
+- `is_weekend` flag  
+- `peak_period` classification: **AM Peak (7–9)**, **PM Peak (16–18)**, **Off-Peak**
+
+### 6️⃣ De-duplication
+Removes duplicate entries using composite keys:
+`["reported_at","route_or_line","loc_or_station","incident_code","vehicle"]`
+
+### 7️⃣ Unified Dataset Creation
+Merges bus and subway datasets into one **long-format table** (`ttc_all_clean_long.csv`) for use in **Tableau Public** and **Power BI** dashboards.
+
+---
+
+## 🧹 Key Functions & Logic
+
+```python
+def _normalize_incident_text(s):
+    base = s.astype("string").str.lower().str.strip()
+    if re.search("mechan|engine|door", x): return "Mechanical"
+    if re.search("collision|crash|struck", x): return "Collision"
+    if re.search("medical|injur|sick", x): return "Medical"
+    ...
