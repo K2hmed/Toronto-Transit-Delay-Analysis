@@ -71,6 +71,27 @@ Merges bus and subway datasets into one **long-format table** (`ttc_all_clean_lo
 
 ## 🧹 Key Functions & Logic
 
+```python
+def _normalize_incident_text(s):
+    base = s.astype("string").str.lower().str.strip()
+    if re.search("mechan|engine|door", x): return "Mechanical"
+    if re.search("collision|crash|struck", x): return "Collision"
+    if re.search("medical|injur|sick", x): return "Medical"
+    ...
+These utility functions allow full automation of the cleaning and enrichment process, adaptable to new data updates.
+
+📊 Outputs
+
+After cleaning and transformation, the following files are generated in data_processed/:
+
+Output File	Description
+bus_clean.csv	Cleaned, enriched TTC Bus delay data
+subway_clean.csv	Cleaned, enriched TTC Subway delay data
+ttc_all_clean_long.csv	Unified long-format dataset for BI visualization
+📈 Exploratory Insights (from quick_report)
+
+Example summary statistics after cleaning:
+
 def _normalize_incident_text(s):
     base = s.astype("string").str.lower().str.strip()
     if re.search("mechan|engine|door", x): return "Mechanical"
