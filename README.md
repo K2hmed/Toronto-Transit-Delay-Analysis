@@ -81,7 +81,7 @@ def _normalize_incident_text(s):
 ```
 These utility functions allow full automation of the cleaning and enrichment process, adaptable to new data updates.
 
-📊 Outputs
+📊 **Outputs**
 
 After cleaning and transformation, the following files are generated in data_processed/:
 
@@ -91,7 +91,7 @@ After cleaning and transformation, the following files are generated in data_pro
 | subway_clean.csv | Cleaned, enriched TTC Subway delay data |
 | ttc_all_clean_long.csv | Unified long-format dataset for BI visualization |
 
-📈 Exploratory Insights (from quick_report)
+### 📈 Exploratory Insights (from quick_report)
 
 Example summary statistics after cleaning:
 ```python
@@ -106,4 +106,24 @@ Security/Police
 Medical
 Infrastructure/Signal
 ```
+These results confirm consistent schema alignment and reveal dominant delay causes.
 
+### 📍 Visualization & Business Intelligence
+
+This dataset powers Tableau Public and Power BI dashboards visualizing:
+
+| Visualization | Description |
+|---------------|-------------|
+| 🕓 Delay Trend Over Time | Compare delays by month and day-of-week |
+| 🚏 Top 10 Routes/Stations | Identify highest average delay routes |
+| 🧭 Peak vs Off-Peak Analysis | Quantify delays by rush-hour periods |
+| 💥 Incident Distribution | Categorize mechanical vs operational issues |
+| 📊 Mode Comparison | Evaluate Bus vs Subway performance |
+
+**Example BI View (Power BI)**
+
+* Delay breakdown by Incident Type
+
+* Peak-period vs weekend comparison
+
+* Dynamic slicers for Year, Route/Line, and Mode
