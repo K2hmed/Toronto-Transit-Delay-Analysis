@@ -201,7 +201,9 @@ It highlights my ability to:
 ## 👨‍💻 Author
 
 **Khushnud Ahmed**
+
 *MSc Data Science & Analytics, Toronto Metropolitan University*
+
 💼 Business Intelligence | Data Analytics | Data Science
 
 ---
