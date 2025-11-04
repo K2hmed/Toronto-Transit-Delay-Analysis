@@ -39,10 +39,8 @@ The project implements a robust **ETL (Extract–Transform–Load)** pipeline de
 
 ### 2️⃣ Schema Standardization
 Creates a consistent column structure across all datasets:
-["mode","source_file","source_sheet",
-"date","time","reported_at","year","month","month_name","day","dow_name","hour",
-"route_or_line","dir_or_bound","loc_or_station",
-"incident_text","incident_code","minutes_delay","minutes_gap","vehicle"]
+
+["mode","source_file","source_sheet","date","time","reported_at","year","month","month_name","day","dow_name","hour","route_or_line","dir_or_bound","loc_or_station","incident_text","incident_code","minutes_delay","minutes_gap","vehicle"]
 
 ### 3️⃣ Data Cleaning
 - Converts `minutes_delay` and `minutes_gap` to numeric (`Int64`).  
@@ -142,9 +140,8 @@ This dataset powers Tableau Public and Power BI dashboards visualizing:
 
 * Ready for Tableau / Power BI integration for BI dashboards
 
----
 
-## 🚀 Tools & Technologies
+### 🚀 Tools & Technologies
 
 | Category | Tools Used |
 |----------|------------|
@@ -154,7 +151,6 @@ This dataset powers Tableau Public and Power BI dashboards visualizing:
 | Data Storage | CSV (cleaned outputs) |
 | Version Control | Git, GitHub |
 
----
 
 ### 🧠 Skills Demonstrated
 
@@ -184,7 +180,6 @@ It highlights my ability to:
 
 * Communicate findings effectively through BI tools
 
----
 
 ### 🧩 Future Work
 
@@ -206,7 +201,6 @@ It highlights my ability to:
 
 💼 Business Intelligence | Data Analytics | Data Science
 
----
 
 ### 🏷️ Tags
 
