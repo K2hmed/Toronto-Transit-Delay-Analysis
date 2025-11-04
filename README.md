@@ -78,6 +78,7 @@ def _normalize_incident_text(s):
     if re.search("collision|crash|struck", x): return "Collision"
     if re.search("medical|injur|sick", x): return "Medical"
     ...
+```
 These utility functions allow full automation of the cleaning and enrichment process, adaptable to new data updates.
 
 📊 Outputs
